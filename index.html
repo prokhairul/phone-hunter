@@ -14,21 +14,45 @@
 </head>
 
 <body>
-
     <header>
         <!-- Section For Logo Area  -->
         <section class="header-area text-center">
             <img src="img/logo.png" class="img-fluid pb-3 pt-3" alt="...">
-
         </section>
+        <!-- Section for Search Fields  -->
+        <div class="container" style="max-width:600px;">
+            <div class="input-group mb-5 input-group-lg">
+                <input id="search-field" type="search" class="form-control shadow"
+                    placeholder="Please enter a brand name! eg: Samsung , iPhone , Oppo"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="search-btn shadow" type="button" id="search-btn">Search</button>
+            </div>
+        </div>
     </header>
 
     <main>
+        <!-- Spinner Text And Error message  -->
+        <div id="spinner" class="spinner text-center">
+            <div class=" spinner-grow" role="status"> </div>
+        </div>
+        <div id="null-input" class="text-danger text-center"></div>
+        <div id="wrong-input" class="text-danger text-center"></div>
 
+        <!-- Section For Showing Search Results  -->
+        <section class="container min-vh-100 mt-2">
+            <div id="search-result"
+                class="row mx-auto row-cols-1 row-cols-md-3 row-cols-lg-3 gx-5 gy-4 mr-5 container-width">
+            </div>
+            <div class=" container w-75 show-more"> <button id="load-more">Load More Device</button> </div>
+        </section>
     </main>
 
+    <!-- Footer Section Start  -->
     <footer>
-
+        <div class="footer-main mt-5 text-center">
+            <p>❖ Phone Finder BD ❖</p>
+            <p>Copyright &copy; Phone Finder 2022 </p>
+        </div>
     </footer>
 
     <!-- bootstrap and JS Linkup  -->
