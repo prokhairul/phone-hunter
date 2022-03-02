@@ -17,25 +17,21 @@ const searchPhone = () => {
     }
 
     const searchText = searchField.value;
-    console.log(searchField);
+
     // Showing Spinner 
     toggleSpinner('block');
-
 
     searchField.value = "";
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
     fetch(url)
         .then(res => res.json())
-        // .then(data => displayResults(data.data));
         .then(data => displayResults(data.data));
 
     const displayResults = phones => {
         const sliced = (phones.slice(0, 20));
-        console.log(sliced);
         const searchResult = document.getElementById("search-result");
         searchResult.textContent = "";
         sliced.forEach(phone => {
-            // console.log(phone);
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = ` 
@@ -54,24 +50,21 @@ const searchPhone = () => {
 
             searchResult.appendChild(div);
         });
+
         // Hiding Spinner 
         toggleSpinner('none');
     }
 }
 
 const loadSinglePhone = phoneslug => {
-    // console.log(phoneId);
     const url = `https://openapi.programming-hero.com/api/phone/${phoneslug}`;
     fetch(url)
         .then(res => res.json())
         .then(data => displaySinglePhone(data.data));
-    // .then(data => console.log(data.data));
 }
 
 // Display Single Phone Details with Modal 
 const displaySinglePhone = singlePhone => {
-
-
     const phoneDetails = document.getElementById("full-details");
     const div = document.createElement('div');
     div.classList.add("row", "g-4", "img-center");

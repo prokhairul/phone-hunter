@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Playfair+Display:wght@600&family=Roboto&family=Sanchez&family=Yeseva+One&display=swap');
 
 /* Main Design Start  */
-
-
 /* card Style  */
 .card-body-style{ background-color: #f5f5f5;}
 .border-style{ border: 3px solid #f5f5f5 !important; }
@@ -24,6 +22,8 @@
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
 }
+
+/* Modal Design section Start  */
 
 #sensors span{
   font-size: 14px;
@@ -56,20 +56,6 @@
 /* Spinner Design  */
 .spinner{display: none;}
 .not-found{font-size: 20px;}
-
-/* Lore More Button  */
-.show-more {
-    margin-top: 50px;
-    display: none;
-}
-#load-more{
-    background-color: #ff7e00;
-    border: 1px solid #f0f8ff;
-    color: #f0f8ff;
-    border-radius: 5px;
-    padding: 10px 15px 10px 15px;
-    margin-left: 15px;
-}
 
 /* Footer Custom Design  */
 .footer-main{ padding: 20px; background-color: #f5f5f5;}
