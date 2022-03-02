@@ -96,3 +96,7 @@
     font-weight: 600;
 }
 
+/* Media Query for Mobile Devices  */
+@media only screen and (min-width: 768px) {
+    .container-width{width: 75%;}
+    }
