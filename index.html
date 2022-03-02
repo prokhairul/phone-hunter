@@ -25,7 +25,7 @@
                 <input id="search-field" type="search" class="form-control shadow"
                     placeholder="Please enter a brand name! eg: Samsung , iPhone , Oppo"
                     aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="search-btn shadow" type="button" id="search-btn">Search</button>
+                <button onclick="searchPhone()" class="search-btn shadow" type="button" id="search-btn">Search</button>
             </div>
         </div>
     </header>
@@ -42,6 +42,41 @@
         <section class="container min-vh-100 mt-2">
             <div id="search-result"
                 class="row mx-auto row-cols-1 row-cols-md-3 row-cols-lg-3 gx-5 gy-4 mr-5 container-width">
+                <div class="col ">
+                    <div class="border-style card ">
+                        <img class="thum-img" src="img/13promax.png" class="w-75" alt="...">
+                        <div class="card-body-style card-body">
+                            <h5 class="phone-name">iPhone 13 Pro Max</h5>
+                            <p class="brand"> Brand: <span>iPhone</span> </p>
+                            <button class=" btn-style" data-bs-toggle="modal" data-bs-target="#exampleModal"> More
+                                Details </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="border-style card ">
+                        <img class="thum-img" src="img/13promax.png" class="w-75" alt="...">
+                        <div class="card-body-style card-body">
+                            <h5 class="phone-name">iPhone 13 Pro Max</h5>
+                            <p class="brand"> Brand: <span>iPhone</span> </p>
+                            <button class=" btn-style" data-bs-toggle="modal" data-bs-target="#exampleModal"> More
+                                Details </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="border-style card ">
+                        <img class="thum-img" src="img/13promax.png" class="w-75" alt="...">
+                        <div class="card-body-style card-body">
+                            <h5 class="phone-name">iPhone 13 Pro Max</h5>
+                            <p class="brand"> Brand: <span>iPhone</span> </p>
+                            <button class=" btn-style" data-bs-toggle="modal" data-bs-target="#exampleModal"> More
+                                Details </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+
             </div>
             <div class=" container w-75 show-more"> <button id="load-more">Load More Device</button> </div>
         </section>

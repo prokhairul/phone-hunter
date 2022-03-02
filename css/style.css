@@ -2,3 +2,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Playfair+Display:wght@600&family=Roboto&family=Sanchez&family=Yeseva+One&display=swap');
 
 /* Main Design Start  */
+
+
+/* card Style  */
+.card-body-style{ background-color: #f5f5f5;}
+.border-style{ border: 3px solid #f5f5f5 !important; }
+
+.phone-name{
+    color: #fb4f14;
+    font-weight: 600;
+    font-family: 'Sanchez', serif;
+    font-size: 18px;
+}
+
+.brand{color: #fb4f14; font-size: 14px;}
+
+.btn-style{
+    background-color: #ff7e00;
+    border: 1px solid #f0f8ff;
+    color: #f0f8ff;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+#sensors span{
+  font-size: 14px;
+  margin: 2px;
+  background: #f5f5f5;
+  padding: 2px 10px;
+  display: inline-block;
+}
+
+.feature-title{
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    padding: 0px 5px 2px 10px;
+    margin: 10px 5px 10px 0px;
+}
+
+.other-sub{margin: 0px 0px 0px 10px;}
+.other-sub p{margin: 0;padding: 0px 0px 5px 0px; font-size: 15px;}
+.other-span{font-weight: 500;}
+
+.main-feature{font-weight: bold; margin-left: 10px;}
+.modalbrand-title{font-size: 15px; padding: 2px 0px 2px 0px;; margin: 0;}
+.img-center{align-items: center;}
+.img-margin{margin-left: 40px;}
+
+/* Thumbnail Img Design  */
+.thum-img{ width: 220px; padding: 22px;}
+/* Spinner Design  */
+.spinner{display: none;}
+.not-found{font-size: 20px;}
+
+/* Lore More Button  */
+.show-more {
+    margin-top: 50px;
+    display: none;
+}
+#load-more{
+    background-color: #ff7e00;
+    border: 1px solid #f0f8ff;
+    color: #f0f8ff;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    margin-left: 15px;
+}
+
+/* Footer Custom Design  */
+.footer-main{ padding: 20px; background-color: #f5f5f5;}
+.footer-main p{
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.form-control{
+    background-color: #f8f8ff;
+    padding: 8px;
+    border-start-start-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    width: 80%;
+    border: 1px solid #f5f5f5;
+    font-size: 16px !important;
+}
+.search-btn{
+    background-color: #ff7e00;
+    border-end-end-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    color:#f0f8ff;
+    font-weight: 600;
+}
+
