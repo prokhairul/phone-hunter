@@ -5,83 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Finder 2022</title>
+    <title>Assignment 6 | Phones API </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="/img/Favicon.png" type="image/x-icon">
-    <!-- bootstrap Css Linkup  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <!-- Section For Logo Area  -->
-        <section class="header-area text-center">
-            <img src="img/logo.png" class="img-fluid pb-3 pt-3" alt="...">
-        </section>
-        <!-- Section for Search Fields  -->
-        <div class="container" style="max-width:600px;">
-            <div class="input-group mb-5 input-group-lg">
-                <input id="search-field" type="search" class="form-control shadow"
-                    placeholder="Please enter a brand name! eg: Samsung , iPhone , Oppo"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="searchPhone()" class="search-btn shadow" type="button" id="search-btn">Search</button>
+    <!-- Section For Logo Area  -->
+    <section class="header-area text-center">
+        <img src="img/logo.png" class="img-fluid pb-3 pt-3" alt="...">
+
+    </section>
+    <!-- Section for Search Fields  -->
+    <div class="container" style="max-width:600px;">
+        <div class="input-group mb-5 input-group-lg">
+            <input id="search-field" type="search" class="form-control shadow"
+                placeholder="Please enter a brand name! eg: Samsung , iPhone , Oppo" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+            <button onclick="searchPhone()" class="search-btn shadow" type="button" id="search-btn">Search</button>
+        </div>
+    </div>
+    <!-- Spinner Text And Error message  -->
+    <div id="spinner" class="spinner text-center">
+        <div class=" spinner-grow" role="status"> </div>
+    </div>
+    <div id="null-input" class="text-danger text-center"></div>
+    <div id="wrong-input" class="text-danger text-center"></div>
+    <!-- Section For Showing Search Results  -->
+    <section class="container min-vh-100 mt-2">
+        <div id="search-result"
+            class="row mx-auto row-cols-1 row-cols-md-3 row-cols-lg-3 gx-5 gy-4 mr-5 container-width">
+
+            <!-- Testing Purpose  -->
+
+        </div>
+        <div class=" container w-75 show-more"> <button id="load-more">Load More Device</button> </div>
+    </section>
+    <!-- Section For Modals  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Full Specifications</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body" id="full-details">
+
+                </div>
             </div>
         </div>
-    </header>
-
-    <main>
-        <!-- Spinner Text And Error message  -->
-        <div id="spinner" class="spinner text-center">
-            <div class=" spinner-grow" role="status"> </div>
-        </div>
-        <div id="null-input" class="text-danger text-center"></div>
-        <div id="wrong-input" class="text-danger text-center"></div>
-
-        <!-- Section For Showing Search Results  -->
-        <section class="container min-vh-100 mt-2">
-            <div id="search-result"
-                class="row mx-auto row-cols-1 row-cols-md-3 row-cols-lg-3 gx-5 gy-4 mr-5 container-width">
-                <div class="col ">
-                    <div class="border-style card ">
-                        <img class="thum-img" src="img/13promax.png" class="w-75" alt="...">
-                        <div class="card-body-style card-body">
-                            <h5 class="phone-name">iPhone 13 Pro Max</h5>
-                            <p class="brand"> Brand: <span>iPhone</span> </p>
-                            <button class=" btn-style" data-bs-toggle="modal" data-bs-target="#exampleModal"> More
-                                Details </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="border-style card ">
-                        <img class="thum-img" src="img/13promax.png" class="w-75" alt="...">
-                        <div class="card-body-style card-body">
-                            <h5 class="phone-name">iPhone 13 Pro Max</h5>
-                            <p class="brand"> Brand: <span>iPhone</span> </p>
-                            <button class=" btn-style" data-bs-toggle="modal" data-bs-target="#exampleModal"> More
-                                Details </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="border-style card ">
-                        <img class="thum-img" src="img/13promax.png" class="w-75" alt="...">
-                        <div class="card-body-style card-body">
-                            <h5 class="phone-name">iPhone 13 Pro Max</h5>
-                            <p class="brand"> Brand: <span>iPhone</span> </p>
-                            <button class=" btn-style" data-bs-toggle="modal" data-bs-target="#exampleModal"> More
-                                Details </button>
-                        </div>
-                    </div>
-                </div>
-                `;
-
-            </div>
-            <div class=" container w-75 show-more"> <button id="load-more">Load More Device</button> </div>
-        </section>
-    </main>
-
+    </div>
     <!-- Footer Section Start  -->
     <footer>
         <div class="footer-main mt-5 text-center">
@@ -89,8 +64,6 @@
             <p>Copyright &copy; Phone Finder 2022 </p>
         </div>
     </footer>
-
-    <!-- bootstrap and JS Linkup  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
