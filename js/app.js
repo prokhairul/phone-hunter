@@ -15,7 +15,6 @@ const searchPhone = () => {
     else {
         nullinput.innerText = "";
     }
-
     const searchText = searchField.value;
 
     // Showing Spinner 
@@ -73,7 +72,7 @@ const displaySinglePhone = singlePhone => {
         <img class="img-margin" src="${singlePhone.image}" class="rounded float-left" alt="...">
         </div>
         <div class="col-md-8"> 
-            <p class="modalbrand-title"><span class="main-feature">Release Date: </span>${singlePhone.releaseDate} </p> 
+            <p class="modalbrand-title"><span class="main-feature">Release Date: </span>  ${singlePhone?.releaseDate} </p> 
             <p class="modalbrand-title"><span class="main-feature">Display: </span>${singlePhone.mainFeatures.displaySize} </p> 
             <p class="modalbrand-title"><span class="main-feature">ChipSet: </span>${singlePhone.mainFeatures.chipSet} </p> 
             <p class="modalbrand-title"><span class="main-feature">Storage: </span>${singlePhone.mainFeatures.storage} </p> 
